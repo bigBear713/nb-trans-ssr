@@ -6,7 +6,6 @@ import { WINDOW_TOKEN } from './window.token';
 import { NB_TRANS_DEFAULT_LANG, NB_TRANS_LOADER, NbTransLang } from '@bigbear713/nb-trans';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-import { environment } from '../environments/environment';
 
 const serverConfig: ApplicationConfig = {
   providers: [
@@ -40,16 +39,17 @@ const serverConfig: ApplicationConfig = {
     {
       provide: NB_TRANS_LOADER,
       useFactory: (http: HttpClient) => {
+        // it should be an url which can be accessed.
+        const urlPrefix = 'http://localhost:4200/';
         return {
-          // https://github.com/ngx-translate/core/issues/1207#issuecomment-673921899
           // it is expecting to get the translation file using HTTP via absolute URL when angualr SSR.
           // So here change the file's path as relative/absolute via environment
 
           // dyn load and the content is a json file
           // [NbTransLang.EN]: () => http.get('./assets/localization/en/translations.json').toPromise(),
-          [NbTransLang.EN]: () => http.get(environment.transFileDomain + 'assets/localization/en/translations.json'),
+          [NbTransLang.EN]: () => http.get(urlPrefix + 'assets/localization/en/translations.json'),
           // [NbTransLang.ZH_CN]: () => http.get('./assets/localization/zh-CN/translations.json').toPromise(),
-          [NbTransLang.ZH_CN]: () => http.get(environment.transFileDomain + 'assets/localization/zh-CN/translations.json'),
+          [NbTransLang.ZH_CN]: () => http.get(urlPrefix + 'assets/localization/zh-CN/translations.json'),
         };
       },
       deps: [HttpClient]

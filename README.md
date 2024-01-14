@@ -1,27 +1,37 @@
-# NbTransSsr
+<div align="center">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+# nb-trans-ssr
 
-## Development server
+Try to use `@bigbear713/nb-trans` in ssr project.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+</div>
 
-## Code scaffolding
+## Readme
+- [中文](https://github.com/bigBear713/nb-trans-ssr/blob/main/README.CN.md "文档 - 中文")
+- [English](https://github.com/bigBear713/nb-trans-ssr/blob/main/README.md "Document - English")
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Start demo project  
+- Install dependencies
+```bash
+npm i
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Start demo project
+```bash
+npm start
+```
 
-## Running unit tests
+- Build demo  
+```bash
+npm run build
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Run in prod mode
+```bash
+npm run serve:ssr
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Attention
+- When building the demo, if you're dynamically loading json files, the file's url should be absoulted, not relatived, like `http://localhost:4200/assets/localization/en/translations.json` . At that time, the url is can be accessed before building.
