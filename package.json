@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:nb-trans-ssr": "node dist/nb-trans-ssr/server/server.mjs",
-    "serve:ssr":"npm run build & npm run serve:ssr:nb-trans-ssr"
+    "serve:ssr": "npm run build & npm run serve:ssr:nb-trans-ssr"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +23,7 @@
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.7",
     "@bigbear713/nb-common": "^17.0.0",
+    "@bigbear713/nb-trans": "^17.0.0",
     "dayjs": "^1.11.10",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
