@@ -2,10 +2,11 @@ import { ChangeDetectionStrategy, Component, Input, OnInit, TemplateRef } from '
 import { INbTransSentencePart } from '@bigbear713/nb-trans';
 
 @Component({
-  selector: 'app-widget',
-  templateUrl: './widget.component.html',
-  styleUrls: ['./widget.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-widget',
+    templateUrl: './widget.component.html',
+    styleUrls: ['./widget.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class WidgetComponent implements OnInit {
 

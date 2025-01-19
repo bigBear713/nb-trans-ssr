@@ -6,12 +6,11 @@ import { GTagService } from './g-tag.service';
 import { NbTransModule, NbTransService } from '@bigbear713/nb-trans';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, NbTransModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-root',
+    imports: [CommonModule, RouterOutlet, NbTransModule],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
 

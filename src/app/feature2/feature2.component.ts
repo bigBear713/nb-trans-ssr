@@ -5,12 +5,11 @@ import { NbTransModule } from '@bigbear713/nb-trans';
 import { GTagService } from '../g-tag.service';
 
 @Component({
-  standalone: true,
-  imports: [NbTransModule, CommonModule],
-  selector: 'app-feature2',
-  templateUrl: './feature2.component.html',
-  styleUrls: ['./feature2.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    imports: [NbTransModule, CommonModule],
+    selector: 'app-feature2',
+    templateUrl: './feature2.component.html',
+    styleUrls: ['./feature2.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Feature2Component implements OnInit {
 
